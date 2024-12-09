@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "78895844850",
+    "project_id": "emailservice-cab9d",
+    "storage_bucket": "emailservice-cab9d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78895844850:android:30640c6b60cd85724aaf6b",
+        "android_client_info": {
+          "package_name": "com.example.final_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHq5Hn3vMopxzWYUMQ-3YwBxL9uVw7cqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
