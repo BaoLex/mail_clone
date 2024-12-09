@@ -1,30 +1,18 @@
 import 'package:final_app/screens/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:final_app/providers/user_provider.dart';
 import 'package:final_app/screens/login_screen.dart';
 import 'package:final_app/utils/colors.dart';
+import 'package:final_app/firebase_options.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb) {
-    await Firebase.initializeApp(
-      options: const FirebaseOptions(
-          apiKey: "AIzaSyAAYUzqlT6uTg6YzqrqQiYpEEAAUe05Dck",
-          authDomain: "emailservice-cab9d.firebaseapp.com",
-          databaseURL: "https://emailservice-cab9d-default-rtdb.firebaseio.com",
-          projectId: "emailservice-cab9d",
-          storageBucket: "emailservice-cab9d.firebasestorage.app",
-          messagingSenderId: "78895844850",
-          appId: "1:78895844850:web:51a8d10dd2170a2d4aaf6b",
-          measurementId: "G-SP0EV7RVZK"),
-    );
-  } else {
-    await Firebase.initializeApp();
-  }
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
